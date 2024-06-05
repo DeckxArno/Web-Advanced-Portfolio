@@ -19,6 +19,23 @@ nav p
     padding-right: 1em;
 }
 
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    background-color: rgb(74, 76, 228);
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0.5em;
+
+}
+
 /* Header */
 
 .headerHome {
@@ -41,3 +58,5 @@ nav p
     width: fit-content;
     padding-left: 2em;
 }
+
+/* Buttons */
