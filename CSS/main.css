@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav
+{
+    background-color: rgb(74, 76, 228);
+    padding: 0.5em;
+}
+
+nav p
+{
+    font-size: 30px;
+    font-family: Arial;
+    text-align: center;
+    padding-right: 1em;
+}
+
+/* Header */
+
+.headerHome {
+    display: flex;
+}
+
+.home{
+    width: fit-content;
+    align-self: center;
+    padding: 1em;
+}
+
+.home a img
+{
+    width: 3em;
+    border-radius: 10px;
+}
+
+.headerTekst{
+    width: fit-content;
+    padding-left: 2em;
+}
