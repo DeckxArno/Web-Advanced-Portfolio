@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Advanced Portfolio</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+    <nav>
+        <div class="headerHome">
+            <div class="home">
+                <a href="/HTML/home.html"><img src="/images/home-button-icon.webp" alt=""></a>
+            </div>
+            <div class="headerTekst">
+                <p>Valideren van het formulier</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Formulier">
+        <h2>Registratieformulier</h2>
+        <form id="Formulier">
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="name">
+            <span class="error" id="naamError"></span>
+            <br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="emailError"></span>
+            <br><br>
+            <button type="submit">Verzenden</button>
+        </form>
+    </div>
+
+    <script src="/JavaScript/Valideren.js"></script>
+</body>
+</html>

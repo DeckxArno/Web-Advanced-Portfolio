@@ -60,3 +60,27 @@ button{
 }
 
 /* Buttons */
+
+/* formulier valideren */
+
+#Formulier
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.Formulier{
+    background-color: rgb(5, 197, 255);
+    margin: 0px 600px;
+    border-radius: 10px;
+}
+
+.Formulier h2{
+    font-size: 30px;
+    font-family: Arial;
+    text-align: center;
+    padding-right: 1em;
+}
