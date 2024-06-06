@@ -1,10 +1,3 @@
-function Spread() {
-    const input = document.getElementById('getal').value;
-    const numbers = input.split(',').map(Number);
-    const newNumbers = [...numbers, 4, 5, 6];
-    document.getElementById('spread-result').textContent = ` ${newNumbers}`;
-}
-
 function Rekenmachine() {
     const g1 = document.getElementById('g1').value;
     const g2 = document.getElementById('g2').value;
