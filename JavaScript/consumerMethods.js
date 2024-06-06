@@ -1,14 +1,12 @@
 let ToDo = [];
 
-function addNote() {
-  const ToDoInput = document.getElementById('ToDo-input');
-  const ToDoText = ToDoInput.value.trim();
-
-  if (ToDoText !== '') {
-    ToDo.push(ToDoText);
-    updateToDoList();
-    ToDoInput.value = '';
-  }
+function addNoteWithDelay(note) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      ToDo.push(note);
+      resolve();
+    }, 1000);
+  });
 }
 
 function updateToDoList() {
@@ -20,6 +18,17 @@ function updateToDoList() {
     listItem.textContent = note;
     ToDoList.appendChild(listItem);
   });
+}
+
+async function addNote() {
+  const ToDoInput = document.getElementById('ToDo-input');
+  const ToDoText = ToDoInput.value.trim();
+
+  if (ToDoText !== '') {
+    await addNoteWithDelay(ToDoText);
+    updateToDoList();
+    ToDoInput.value = '';
+  }
 }
 
 document.getElementById('add-note').addEventListener('click', addNote);
