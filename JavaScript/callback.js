@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', function() {
     randomNumberElement.textContent = 'Random Number: ' + randomNumber;
 });
 
-// Functie die een Promise teruggeeft om te controleren of het gegenereerde getal even is
 function Even(number) {
     return new Promise((resolve, reject) => {
         if (number % 2 === 0) {
@@ -16,13 +15,11 @@ function Even(number) {
     });
 }
 
-// Callback functie om het resultaat van de Promise af te handelen en op de webpagina weer te geven
 function handleResult(result) {
     const resultElement = document.getElementById('result');
     resultElement.textContent = 'Your guess is ' + result;
 }
 
-// Callback functie om eventuele fouten af te handelen en op de webpagina weer te geven
 function Fout(error) {
     const resultElement = document.getElementById('result');
     resultElement.textContent = 'Fout: ' + error.message;
