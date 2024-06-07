@@ -1,14 +1,13 @@
 # Web-Advanced-Portfolio
 
-## Projectstructuur
+## Projectindeling
 
-De projectstructuur is als volgt:
 - De hoofdpagina van het project: `HTML/home.html` 
 - De CSS-stijlen voor het project: `CSS/main.css` 
 - De map met alle JavaScript-bestanden: `JavaScript` 
 - De map met alle gebruikte foto's: `images`
 
-## Inhoud van de Portfolio
+## Inhoud van mijn Portfolio
 
 Hieronder vindt je de verschillende opdrachten, wat ze zijn en enkele voorbeelden waar ik ze gebruikt heb:
 
