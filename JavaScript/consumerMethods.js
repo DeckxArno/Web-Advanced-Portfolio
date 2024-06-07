@@ -1,21 +1,56 @@
 let ToDo = [];
 
-function addNoteWithDelay(note) {
+function laadToDoLijst() {
+  const opslaan = localStorage.getItem('ToDo');
+  if (opslaan) {
+    ToDo = JSON.parse(opslaan);
+  }
+  updateToDoLijst();
+}
+
+function opslaanToDoList() {
+  localStorage.setItem('ToDo', JSON.stringify(ToDo));
+}
+
+function addToDoWithDelay(note) {
   return new Promise((resolve) => {
     setTimeout(() => {
       ToDo.push(note);
+      opslaanToDoList();
       resolve();
     }, 1000);
   });
 }
 
-function updateToDoList() {
+function deleteToDoWithDelay(index) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      ToDo.splice(index, 1);
+      opslaanToDoList();
+      resolve();
+    }, 1000);
+  });
+}
+
+function updateToDoLijst() {
   const ToDoList = document.getElementById('ToDo-list');
   ToDoList.innerHTML = '';
 
   ToDo.forEach((note, index) => {
     const listItem = document.createElement('li');
-    listItem.textContent = note;
+    
+    const noteText = document.createElement('span');
+    noteText.textContent = note;
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', async () => {
+      await deleteToDoWithDelay(index);
+      updateToDoLijst();
+    });
+
+    listItem.appendChild(noteText);
+    listItem.appendChild(deleteButton);
     ToDoList.appendChild(listItem);
   });
 }
@@ -25,8 +60,8 @@ async function addNote() {
   const ToDoText = ToDoInput.value.trim();
 
   if (ToDoText !== '') {
-    await addNoteWithDelay(ToDoText);
-    updateToDoList();
+    await addToDoWithDelay(ToDoText);
+    updateToDoLijst();
     ToDoInput.value = '';
   }
 }
@@ -38,3 +73,5 @@ document.getElementById('ToDo-input').addEventListener('keypress', function(even
     addNote();
   }
 });
+
+document.addEventListener('DOMContentLoaded', laadToDoLijst);
