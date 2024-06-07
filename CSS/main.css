@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(194, 194, 194);
 }
 
 nav
@@ -23,17 +24,6 @@ a
 {
     text-decoration: none;
     color: white;
-}
-
-button{
-    background-color: rgb(74, 76, 228);
-    color: white;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 0.5em;
-
 }
 
 /* Header */
@@ -61,6 +51,42 @@ button{
 
 /* Buttons */
 
+button{
+    background-color: rgb(74, 76, 228);
+    color: white;
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 1em;
+    display: flex;
+    width: 250px;
+    justify-content: center;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Selecteren & manipuleren */
+
+.SelecterenManipuleren{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.SelecterenManipuleren p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /* formulier valideren */
 
 #Formulier
@@ -73,16 +99,18 @@ button{
 }
 
 .Formulier{
-    background-color: rgb(5, 197, 255);
+    background-color: rgb(57, 209, 255);
     margin: 0px 600px;
     border-radius: 10px;
+    color: white;
 }
 
 .Formulier h2{
-    font-size: 30px;
+    font-size: 24px;
     font-family: Arial;
     text-align: center;
     padding-right: 1em;
+    padding-top: 1em;
 }
 
 /* destructuring + template literals*/
@@ -97,7 +125,92 @@ button{
     border-radius: 10px;
 }
 
+/* spread & rest */
+
+.Rekenmachine{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.Rekenmachine input{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+/* callback */
+
+.evenOneven{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+/* consumerMethods */
+
+.To-Do{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.To-Do #ToDo-input{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+/* Fetch & JSON */
+
+.fetch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.fetch #output{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    width: 400px;
+}
+
 /* Animaties */
+
+.spiderman{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spiderman p{
+    font-size: 20px;
+    font-family: Arial;
+    text-align: center;
+    padding: 0 1em;
+    background-color: red;
+    margin: 20px 600px;
+    border-radius: 10px;
+}
 
 .rij{
     display:inline-flex;;
